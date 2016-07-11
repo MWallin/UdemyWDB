@@ -1,0 +1,24 @@
+h1 {
+  color: red;
+
+  /*
+    border-color: purple;
+    border-width: 5px;
+    border-style: solid;
+  */
+
+  border: 1px dashed mediumaquamarine;
+}
+
+h4 {
+  background: rgb(255, 100, 80);
+}
+
+body {
+  /* background: url(http://wallpapercave.com/wp/Tb3g7Fv.jpg); */
+  background: pink;
+}
+
+li {
+  color: orange;
+}

@@ -1,0 +1,12 @@
+body {
+  background: pink;
+}
+
+#special {
+  background: green;
+}
+
+.important {
+  background: red;
+  text-decoration: line-through;
+}

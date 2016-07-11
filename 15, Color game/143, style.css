@@ -1,0 +1,33 @@
+body {
+  background: #232323;
+}
+
+.square {
+  width: 30%;
+  padding-bottom: 30%;
+  float: left;
+  margin: 1.66%;
+}
+
+/* Unused for now */
+.faded-square {
+  background: #232323;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#title {
+  color: whitesmoke;
+}
+
+#goalColorDisplay {
+  text-transform: uppercase;
+}
+
+#message {
+  color: whitesmoke;
+}
+

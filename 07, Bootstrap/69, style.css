@@ -1,0 +1,48 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-image: url(http://orig01.deviantart.net/557f/f/2014/084/9/f/hydra_by_yoso999-d7bmpqg.jpg);
+  background-size: cover;
+  font-family: 'Titillium Web', sans-serif;
+  padding-top: 70px;
+}
+
+.navbar-default {
+  background-color: #DCBF85;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: ghostwhite;
+}
+
+.navbar-default .navbar-brand {
+  color: ghostwhite;
+}
+
+.navbar-default .navbar-nav > .active > a {
+  background-color: #F6D99F;
+}
+
+#centercontent {
+  color: ghostwhite;
+  padding-top: 25%;
+  text-align: center;
+}
+
+#contentheader {
+  font-weight: 700;
+  font-size: 5em;
+}
+
+#contenttagline {
+  font-size: 2em;
+  text-shadow: 2px 2px 1px rgba(150, 150, 150, 0.78);
+}
+
+hr {
+  width: 850px;
+  border-top: 1px solid #F8F8F8;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}

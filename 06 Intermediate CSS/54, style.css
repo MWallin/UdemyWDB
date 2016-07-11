@@ -1,0 +1,19 @@
+img {
+  width: 30%;
+  float: left;
+  margin: 1.66%;
+}
+
+p {
+  margin-left: 1.66%;
+  padding-bottom: 20px;
+  width: 30%;
+
+  border-bottom: 2px solid lightgray;
+
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+
+  text-transform: uppercase;
+}
