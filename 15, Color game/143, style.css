@@ -1,5 +1,70 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
+
 body {
   background: #232323;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* The header block */
+#header {
+  color: whitesmoke;
+  text-align: center;
+  background: steelblue;
+  margin: 0;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 1.1;
+  padding: 20px 0;
+}
+
+#goalColorDisplay {
+  display: block;
+  font-size: 200%;
+}
+
+/* The Stripe */
+#stripe {
+  background: whitesmoke;
+  height: 30px;
+  text-align: center;
+}
+
+#message {
+  color: steelblue;
+  display: inline-block;
+  width: 20%;
+}
+
+button {
+  text-transform: uppercase;
+  border: none;
+  background: none;
+  height: 100%;
+  font-weight: 700;
+  color: steelblue;
+  letter-spacing: 1px;
+  font-size: inherit;
+  outline-style: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+button:hover {
+  color: whitesmoke;
+  background: steelblue;
+}
+
+.selected {
+  background: steelblue;
+  color: whitesmoke;
+}
+
+/* The color squares */
+.container {
+  max-width: 600px;
+  margin: 20px auto;
 }
 
 .square {
@@ -7,27 +72,8 @@ body {
   padding-bottom: 30%;
   float: left;
   margin: 1.66%;
+  border-radius: 25%;
+  -webkit-transition: background 0.6s;
+  -moz-transition: background 0.6s;
+  transition: background 0.6s;
 }
-
-/* Unused for now */
-.faded-square {
-  background: #232323;
-}
-
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-#title {
-  color: whitesmoke;
-}
-
-#goalColorDisplay {
-  text-transform: uppercase;
-}
-
-#message {
-  color: whitesmoke;
-}
-
