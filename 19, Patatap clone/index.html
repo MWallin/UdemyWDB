@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Patatap clone</title>
+    
+    <!-- Load assets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/patclone.css">
+    
+    <!-- Load the Paper.js library -->
+    <script type="text/javascript" src="assets/js/lib/paper-full.js"></script>
+    <!-- Load external PaperScript and associate it with myCanvas -->
+    <script type="text/paperscript" canvas="myCanvas">
+
+    var lines = 30;
+    var rows = 25;
+
+    var x = 40;
+    var y = 50;
+    var radius = 15;
+
+
+    for (i = 1; i <= lines; i++) {
+      
+      x ++; 
+
+      for (j = 1; j <= rows; j++) {
+
+        y+=0.5;
+
+        var myCircle = new Path.Circle(new Point(x * i, y * j), radius);
+        
+        myCircle.fillColor = new Color(Math.random(), Math.random(), 1);
+      }
+
+    }
+
+
+    </script>
+
+
+  </head>
+
+  <body>
+
+     <canvas id="myCanvas" resize></canvas>
+
+  </body>
+
+</html>
