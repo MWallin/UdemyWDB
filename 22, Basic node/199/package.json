@@ -1,0 +1,11 @@
+{
+  "name": "199",
+  "version": "0.0.1",
+  "description": "Basic test app using faker-module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MiW",
+  "license": "ISC"
+}
