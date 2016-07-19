@@ -1,0 +1,16 @@
+{
+  "name": "198",
+  "version": "1.0.0",
+  "description": "First test app",
+  "main": "app.js",
+  "dependencies": {
+    "cat-me": "^1.0.3",
+    "knock-knock-jokes": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MiW",
+  "license": "ISC"
+}
