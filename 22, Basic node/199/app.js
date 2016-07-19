@@ -18,7 +18,7 @@ function printInventoryList() {
 
   for (var index = 0; index < items; index++) {
     
-    console.log(makePricedProducts());
+    console.log(index + ": " + makePricedProducts());
     
   }
 
