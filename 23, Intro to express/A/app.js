@@ -6,7 +6,6 @@
 var express = require("express");
 var app = express();
 
-
 // ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
 
 
@@ -39,6 +38,20 @@ app.get("/dog", function (req, res) {
 });
 
 
+// Show wich activity was asked for
+app.get("/activity/:activityId", function (req, res) {
+  
+  res.send("You are looking at activity: " + req.params.activityId);
+
+});
+
+
+// Catch all
+app.get("*", function (req, res) {
+  
+  res.send("Route not made yet");
+
+});
 
 
 // ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
@@ -52,6 +65,5 @@ app.get("/dog", function (req, res) {
 app.listen(3000, function () {
   console.log("Server has started!");
 });
-
 
 // ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
