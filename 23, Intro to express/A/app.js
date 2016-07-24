@@ -1,4 +1,4 @@
-/// <reference path="../typings/index.d.ts" />
+/// <reference path="../../typings/index.d.ts" />
 
 // ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
 // App setup
@@ -32,7 +32,7 @@ app.get("/bye", function (req, res) {
 
 // "/dog" => Meow!!
 app.get("/dog", function (req, res) {
-  
+
   res.send("Meow!");
 
 });
@@ -40,7 +40,7 @@ app.get("/dog", function (req, res) {
 
 // Show wich activity was asked for
 app.get("/activity/:activityId", function (req, res) {
-  
+
   res.send("You are looking at activity: " + req.params.activityId);
 
 });
@@ -48,7 +48,7 @@ app.get("/activity/:activityId", function (req, res) {
 
 // Catch all
 app.get("*", function (req, res) {
-  
+
   res.send("Route not made yet");
 
 });
