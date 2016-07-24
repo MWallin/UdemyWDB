@@ -22,11 +22,11 @@
             "always"
         ],
 		"eqeqeq": [
-			"error", 
+			"error",
 			"allow-null"
 		],
 		"no-console": [
-			"error", 
+			"error",
 			{ "allow": ["log", "warn", "error"] }
 		]
     }

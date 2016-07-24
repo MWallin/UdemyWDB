@@ -34,42 +34,20 @@ app.get("/", function (req, res){
 app.get("/speak/:animal", function (req, res) {
 
 
-  var animal = req.params.animal;
+  var animal = req.params.animal.toLowerCase();
 
-  var sendString = "";
+  var sounds = {
+    pig: "Oink",
+    cow: "Moooo",
+    dog: "Woof woof!",
+    cat: "I hate you human",
+    goldfish: "..."
+  };
 
-
-  switch (animal) {
-
-  case "pig":
-
-    sendString = "The pig says 'Oink'";
-
-    break;
-
-
-  case "cow":
-
-    sendString = "The cow says 'Moo'";
-
-    break;
+  var sound = sounds[animal];
 
 
-  case "dog":
-
-    sendString = "The dog says 'Woof Woof'";
-
-    break;
-
-
-  default:
-
-    sendString = "Animal unknown, try again";
-
-  }
-
-
-  res.send(sendString);
+  res.send("The " + animal + " says \"" + sound + "\"");
 
 
 });
@@ -83,7 +61,7 @@ app.get("/repeat/:string/:times/:tocase", function (req, res) {
 
 
   var repeatString = req.params.string;
-  var repeatTimes = req.params.times;
+  var repeatTimes = Number(req.params.times);
   var toCase = req.params.tocase;
 
   var sendString = "";
@@ -91,7 +69,7 @@ app.get("/repeat/:string/:times/:tocase", function (req, res) {
 
   for (var index = repeatTimes; index > 0; index--) {
 
-    sendString = sendString + repeatString + " ";
+    sendString += repeatString + " ";
 
   }
 
