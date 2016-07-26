@@ -1,12 +1,14 @@
+"use strict";
+
 /// <reference path="../../typings/index.d.ts" />
 
 // ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
 // ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
 // App setup
 
-var express = require("express");
+const express = require( "express" );
 
-var app = express();
+const app = express();
 
 // ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
 // ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
@@ -20,9 +22,9 @@ var app = express();
 
 
 // "/" => Hi
-app.get("/", function (req, res){
+app.get( "/", function ( req, res ){
 
-  res.send("Hi there, welcome to my assignment!");
+  res.send( "Hi there, welcome to my assignment!" );
 
 });
 
@@ -31,23 +33,23 @@ app.get("/", function (req, res){
 
 
 // Speak -> Animal sounds
-app.get("/speak/:animal", function (req, res) {
+app.get( "/speak/:animal", function ( req, res ) {
 
 
-  var animal = req.params.animal.toLowerCase();
+  const animal = req.params.animal.toLowerCase();
 
-  var sounds = {
-    pig: "Oink",
-    cow: "Moooo",
-    dog: "Woof woof!",
-    cat: "I hate you human",
+  const sounds = {
+    pig     : "Oink",
+    cow     : "Moooo",
+    dog     : "Woof woof!",
+    cat     : "I hate you human",
     goldfish: "..."
   };
 
-  var sound = sounds[animal];
+  const sound = sounds[animal];
 
 
-  res.send("The " + animal + " says \"" + sound + "\"");
+  res.send( "The " + animal + " says \"" + sound + "\"" );
 
 
 });
@@ -57,24 +59,24 @@ app.get("/speak/:animal", function (req, res) {
 
 
 // Repeat -> Repeat string x times
-app.get("/repeat/:string/:times/:tocase", function (req, res) {
+app.get( "/repeat/:string/:times/:tocase", function ( req, res ) {
 
 
-  var repeatString = req.params.string;
-  var repeatTimes = Number(req.params.times);
-  var toCase = req.params.tocase;
+  const repeatString = req.params.string;
+  const repeatTimes = Number( req.params.times );
+  const toCase = req.params.tocase;
 
-  var sendString = "";
+  let sendString = "";
 
 
-  for (var index = repeatTimes; index > 0; index--) {
+  for ( let index = repeatTimes; index > 0; index-- ) {
 
     sendString += repeatString + " ";
 
   }
 
 
-  if (toCase === "upper") {
+  if ( toCase === "upper" ) {
 
     sendString = sendString.trim();
     sendString = sendString.toUpperCase();
@@ -86,7 +88,7 @@ app.get("/repeat/:string/:times/:tocase", function (req, res) {
   }
 
 
-  res.send(sendString);
+  res.send( sendString );
 
 
 });
@@ -96,9 +98,9 @@ app.get("/repeat/:string/:times/:tocase", function (req, res) {
 
 
 // Any other route
-app.get("*", function (req, res) {
+app.get( "*", function ( req, res ) {
 
-  res.send("Sorry, page not found...What are you doing with your life?");
+  res.send( "Sorry, page not found...What are you doing with your life?" );
 
 });
 
@@ -113,9 +115,9 @@ app.get("*", function (req, res) {
 // ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
 // Server start
 
-app.listen(3000, function () {
+app.listen( 3000, function () {
 
-  console.log("Server has started!");
+  console.log( "Server has started!" );
 
 });
 
