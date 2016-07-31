@@ -107,9 +107,6 @@
           "error",
           "never"
         ],
-        "space-before-function-paren":
-          "error"
-        ,
         "space-in-parens": [
           "error",
           "always",
