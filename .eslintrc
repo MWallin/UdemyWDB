@@ -56,6 +56,9 @@
         "no-unused-expressions":
           "error"
         ,
+        "no-unused-vars":
+          "warn"
+        ,
         "vars-on-top":
           "error"
         ,
@@ -95,9 +98,6 @@
           "error"
         ,
         "no-spaced-func":
-          "error"
-        ,
-        "no-trailing-spaces":
           "error"
         ,
         "object-property-newline":
