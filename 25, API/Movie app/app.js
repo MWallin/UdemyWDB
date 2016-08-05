@@ -49,7 +49,7 @@ app.get( "/results", function ( req, res ) {
 
   request( searchURL, function( error, response, body ) {
 
-    if ( !error && response.statusCode == 200 ) {
+    if ( !error && response.statusCode === 200 ) {
 
       data = JSON.parse( body );
 

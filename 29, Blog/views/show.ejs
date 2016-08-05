@@ -1,0 +1,46 @@
+<% include partials/header %>
+
+
+  <div class="ui main text container">
+
+
+    <div class="ui huge header"><%= blog.title %></div>
+
+
+    <div class="ui top attached segment">
+
+      <div class="item">
+
+
+        <div class="content">
+
+          <span><%= blog.created.toLocaleString() %></span>
+
+          <img class="ui centered rounded image" src="<%= blog.image %>" alt="">
+
+          <div class="description">
+            <p><%- blog.body %></p>
+          </div>
+
+
+          <div class="extra">
+            <a href="/blogs" class="ui teal basic button left floated">Go back</a>
+
+            <a href="/blogs/<%= blog._id %>/edit" class="ui orange basic button right floated">Edit</a>
+
+            <form class="delete-btn" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+              <button class="ui red basic button right floated">Delete</button>
+            </form>
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+<% include partials/footer %>

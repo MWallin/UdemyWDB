@@ -20,7 +20,7 @@
             "double"
         ],
         "semi": [
-            "error",
+            "off",
             "always"
         ],
         "eqeqeq": [
@@ -126,7 +126,7 @@
           { "align": "colon" }
         ],
         "no-multi-spaces":
-          "error"
+          "off"
 
     }
 }

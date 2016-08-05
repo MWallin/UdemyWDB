@@ -1,0 +1,17 @@
+body {
+  background: #E9ECDF;
+}
+
+
+i.icon {
+  font-size: 2em;
+}
+
+
+.container.main {
+  margin-top: 7em;
+}
+
+.delete-btn {
+  display: inline;
+}
